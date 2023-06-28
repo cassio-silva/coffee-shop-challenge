@@ -1,12 +1,12 @@
+import { NumberInput } from './NumberInput'
 import { coffeeList } from './coffeData'
+import { priceFormatter } from '../../../../utils/formatter'
 import {
   CoffeeCard,
   CoffeeCardFooter,
   CoffeeContainer,
   CoffeeContent,
 } from './styles'
-import { priceFormatter } from '../../../../utils/formatter'
-import { NumberInput } from './NumberInput'
 
 export function OurCoffeeSection() {
   return (
@@ -26,7 +26,7 @@ export function OurCoffeeSection() {
             <p>{coffee.description}</p>
             <CoffeeCardFooter>
               <strong>{priceFormatter.format(coffee.price)}</strong>
-              <NumberInput />
+              <NumberInput amount={coffee.amount} id={coffee.id} />
             </CoffeeCardFooter>
           </CoffeeCard>
         ))}

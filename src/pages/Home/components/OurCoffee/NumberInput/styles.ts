@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const InputNumberContainer = styled.div`
+export const InputNumberContainer = styled.form`
   display: flex;
   margin-left: auto;
 `
@@ -35,22 +35,23 @@ export const InputNumberWrapper = styled.div`
     }
   }
 `
-interface InputButtonControlProps {
-  variant: 'minus' | 'plus'
-}
 
-export const InputButtonControl = styled.button<InputButtonControlProps>`
+export const InputButtonControl = styled.button`
   display: flex;
   flex: 1;
   background: ${(props) => props.theme['base-button']};
   color: ${(props) => props.theme.purple};
   border: 0;
+  border-radius: 6px;
   padding: 8px;
   transition: color 0.2s;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: ${(props) => props.theme['purple-dark']};
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 3px 2px ${(props) => props.theme.purple};
   }
 `
 export const ButtonAddToCart = styled.button`
@@ -62,8 +63,11 @@ export const ButtonAddToCart = styled.button`
   line-height: 0;
   transition: background-color 0.2s;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background: ${(props) => props.theme.purple};
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 1px 2px ${(props) => props.theme['purple-dark']};
   }
 `

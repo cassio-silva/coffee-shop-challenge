@@ -1,22 +1,25 @@
+import { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
+import { MapPin } from 'phosphor-react'
+import { ShoppingCart } from '@phosphor-icons/react'
 import {
   HeaderContainer,
   HeaderContent,
   InfoContainer,
   Location,
 } from './styles'
-import { MapPin } from 'phosphor-react'
 import CoffeeDeliveryLogo from '../../assets/logo.svg'
-import { ShoppingCart } from '@phosphor-icons/react'
-import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
+import { CheckoutContext } from '../../contexts/CheckoutContext'
 
 export function Header() {
-  const [itemsOnCart] = useState(3)
+  const { checkoutList } = useContext(CheckoutContext)
 
   return (
     <HeaderContainer>
       <HeaderContent>
-        <img src={CoffeeDeliveryLogo} alt="" />
+        <NavLink to={'/'}>
+          <img src={CoffeeDeliveryLogo} alt="" />
+        </NavLink>
 
         <InfoContainer>
           <Location>
@@ -24,7 +27,7 @@ export function Header() {
             <span>São José dos Campos, SP</span>
           </Location>
           <NavLink to={'/checkout'}>
-            {itemsOnCart > 0 && <strong>{itemsOnCart}</strong>}
+            {checkoutList.length > 0 && <strong>{checkoutList.length}</strong>}
             <ShoppingCart size={22} weight={'fill'} />
           </NavLink>
         </InfoContainer>

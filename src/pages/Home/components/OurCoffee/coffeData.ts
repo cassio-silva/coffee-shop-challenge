@@ -13,13 +13,14 @@ import Havaiano from '../../../../assets/coffee/Type=Havaiano.png'
 import Arabe from '../../../../assets/coffee/Type=Árabe.png'
 import Irlandes from '../../../../assets/coffee/Type=Irlandês.png'
 
-interface CoffeeProps {
+export interface CoffeeProps {
   id: number
   tags: string[]
   name: string
   description: string
   price: number
   imgSrc: string
+  amount: number
 }
 
 const coffeeList: CoffeeProps[] = [
@@ -30,6 +31,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'O tradicional café feito com água quente e grãos moídos',
     price: 9.9,
     imgSrc: ExpressoTradicional,
+    amount: 0,
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Expresso diluído, menos intenso que o tradicional',
     price: 9.9,
     imgSrc: ExpressoAmericano,
+    amount: 0,
   },
   {
     id: 3,
@@ -46,6 +49,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Café expresso tradicional com espuma cremosa',
     price: 9.9,
     imgSrc: ExpressoCremoso,
+    amount: 0,
   },
   {
     id: 4,
@@ -54,6 +58,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Bebida preparada com café expresso e cubos de gelo',
     price: 9.9,
     imgSrc: ExpressoGelado,
+    amount: 0,
   },
   {
     id: 5,
@@ -62,6 +67,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
     price: 9.9,
     imgSrc: CafeComLeite,
+    amount: 0,
   },
   {
     id: 6,
@@ -71,6 +77,7 @@ const coffeeList: CoffeeProps[] = [
       'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: 9.9,
     imgSrc: Latte,
+    amount: 0,
   },
   {
     id: 7,
@@ -80,6 +87,7 @@ const coffeeList: CoffeeProps[] = [
       'Bebida com canela feita de doses iguais de café, leite e espuma',
     price: 9.9,
     imgSrc: Cappucino,
+    amount: 0,
   },
   {
     id: 8,
@@ -89,6 +97,7 @@ const coffeeList: CoffeeProps[] = [
       'Café expresso misturado com um pouco de leite quente e espuma',
     price: 9.9,
     imgSrc: Macchiato,
+    amount: 0,
   },
   {
     id: 9,
@@ -97,6 +106,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
     price: 9.9,
     imgSrc: Mocaccino,
+    amount: 0,
   },
   {
     id: 10,
@@ -105,6 +115,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
     price: 9.9,
     imgSrc: ChocolateQuente,
+    amount: 0,
   },
   {
     id: 11,
@@ -114,6 +125,7 @@ const coffeeList: CoffeeProps[] = [
       'Drink gelado de café expresso com rum, creme de leite e hortelã',
     price: 9.9,
     imgSrc: Cubano,
+    amount: 0,
   },
   {
     id: 12,
@@ -122,6 +134,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Bebida adocicada preparada com café e leite de coco',
     price: 9.9,
     imgSrc: Havaiano,
+    amount: 0,
   },
   {
     id: 13,
@@ -130,6 +143,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Bebida preparada com grãos de café árabe e especiarias',
     price: 9.9,
     imgSrc: Arabe,
+    amount: 0,
   },
   {
     id: 14,
@@ -138,6 +152,7 @@ const coffeeList: CoffeeProps[] = [
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     price: 9.9,
     imgSrc: Irlandes,
+    amount: 0,
   },
 ]
 
