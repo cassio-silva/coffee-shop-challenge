@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import { MapPin } from 'phosphor-react'
-import { ShoppingCart } from '@phosphor-icons/react'
+import { MapPin, ShoppingCart } from 'phosphor-react'
 import {
   HeaderContainer,
   HeaderContent,

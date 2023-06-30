@@ -83,7 +83,9 @@ export function Checkout() {
     saveUserAddressIntoStorage()
     if (!isSubmitting && coffeeOrderList.length > 0) {
       resetOrderList()
-      navigate('/success')
+      setTimeout(() => {
+        navigate('/success')
+      }, 1000)
     }
   }
 
