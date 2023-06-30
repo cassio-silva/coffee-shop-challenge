@@ -12,7 +12,7 @@ import CoffeeDeliveryLogo from '../../assets/logo.svg'
 import { CheckoutContext } from '../../contexts/CheckoutContext'
 
 export function Header() {
-  const { checkoutList } = useContext(CheckoutContext)
+  const { coffeeOrderList } = useContext(CheckoutContext)
 
   return (
     <HeaderContainer>
@@ -27,7 +27,9 @@ export function Header() {
             <span>São José dos Campos, SP</span>
           </Location>
           <NavLink to={'/checkout'}>
-            {checkoutList.length > 0 && <strong>{checkoutList.length}</strong>}
+            {coffeeOrderList.length > 0 && (
+              <strong>{coffeeOrderList.length}</strong>
+            )}
             <ShoppingCart size={22} weight={'fill'} />
           </NavLink>
         </InfoContainer>
