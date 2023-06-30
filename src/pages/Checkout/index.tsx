@@ -78,9 +78,10 @@ export function Checkout() {
   })
   const navigate = useNavigate()
 
-  function handleSubmitOrderCheckout(data: OrderProps) {
+  // function handleSubmitOrderCheckout(data: OrderProps) {
+  function handleSubmitOrderCheckout() {
     saveUserAddressIntoStorage()
-    if (!isSubmitting) {
+    if (!isSubmitting && coffeeOrderList.length > 0) {
       resetOrderList()
       navigate('/success')
     }
@@ -143,6 +144,7 @@ export function Checkout() {
   useEffect(() => {
     getUserAddressFromStorage()
     updateCheckoutTotal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
