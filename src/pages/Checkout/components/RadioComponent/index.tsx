@@ -1,27 +1,21 @@
-import { UseFormRegister, UseFormSetValue } from 'react-hook-form'
+import { useFormContext } from 'react-hook-form'
 import {
   RadioPaymentContainer,
   RadioPaymentIndicator,
   RadioPaymentItem,
 } from './styles'
 import { Bank, CreditCard, Money } from 'phosphor-react'
+import { OrderProps } from '../..'
 
-interface RadioComponentProps {
-  name: string
-  register: UseFormRegister<any>
-  setValue: UseFormSetValue<any>
-}
+export function RadioComponent() {
+  const { register, setValue } = useFormContext<OrderProps>()
 
-export function RadioComponent({
-  name,
-  register,
-  setValue,
-}: RadioComponentProps) {
   return (
     <RadioPaymentContainer
       defaultValue={'credito'}
-      {...register(name, {
-        onChange: (event) => setValue(name, event.target.value),
+      {...register('address.paymentMethod', {
+        onChange: (event) =>
+          setValue('address.paymentMethod', event.target.value),
       })}
     >
       <RadioPaymentItem value="credito">

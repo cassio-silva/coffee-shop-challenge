@@ -67,4 +67,8 @@ export const Location = styled.div`
   color: ${(props) => props.theme['purple-dark']};
   font-size: 0.875rem;
   line-height: 1.3;
+
+  svg {
+    margin-right: 4px;
+  }
 `
