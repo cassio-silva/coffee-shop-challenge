@@ -5,10 +5,10 @@ import {
   RadioPaymentItem,
 } from './styles'
 import { Bank, CreditCard, Money } from 'phosphor-react'
-import { OrderProps } from '../..'
+import { CheckoutInfoProps } from '../..'
 
 export function RadioComponent() {
-  const { register, setValue } = useFormContext<OrderProps>()
+  const { register, setValue } = useFormContext<CheckoutInfoProps>()
 
   return (
     <RadioPaymentContainer

@@ -101,8 +101,8 @@ export function Checkout() {
 
   const navigate = useNavigate()
 
-  // function handleSubmitOrderCheckout() {
-  function handleSubmitOrderCheckout(data: CheckoutInfoProps) {
+  // function handleSubmitOrderCheckout(data: CheckoutInfoProps) {
+  function handleSubmitOrderCheckout() {
     if (orderList.length > 0) {
       saveUserAddressIntoStorage()
       setTimeout(() => {
